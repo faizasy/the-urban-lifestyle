@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Image Assets/favicon_TUL.png">
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS to define the color palette and font */
+        :root {
+            --primary-color: #e67e22; /* Orange */
+            --secondary-color: #1abc9c; /* Teal */
+            --dark-bg: #1c2833; /* Dark background */
+            --light-text: #ffffff; /* White text */
+            --gray-text: #95a5a6; /* Light gray text */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+        .text-primary { color: var(--primary-color); }
+        .bg-primary { background-color: var(--primary-color); }
+        .bg-dark-bg { background-color: var(--dark-bg); }
+        .bg-gray-bg { background-color: #1c2833; } /* Using the same dark color for consistency */
+        .border-primary { border-color: var(--primary-color); }
+        .border-secondary { border-color: var(--secondary-color); }
+        .text-secondary { color: var(--secondary-color); }
+        .text-gray-text { color: var(--gray-text); }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px 0 rgba(230, 126, 34, 0.4);
+        }
+        /* Style for the active navigation link */
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-bg text-white">
+
+    <!-- Header and Navigation -->
+    <header class="bg-dark-bg sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Image -->
+            <a href="#" class="flex items-center">
+                <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\the_urbanlifestyle_logo.png" alt="The Urban Lifestyle Logo" class="h-12 w-auto mr-3 rounded-lg shadow" />
+                <span class="text-3xl font-bold text-primary hidden md:inline">The Urban Lifestyle</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link hover:text-primary transition-colors duration-300 active" data-target="home">Home</a></li>
+                <li><a href="#services" class="nav-link hover:text-primary transition-colors duration-300" data-target="services">Services</a></li>
+                <li><a href="#work" class="nav-link hover:text-primary transition-colors duration-300" data-target="work">Work</a></li>
+                <li><a href="#contact" class="nav-link hover:text-primary transition-colors duration-300" data-target="contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-bg">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#home" class="nav-link text-lg hover:text-primary transition-colors duration-300 active" data-target="home">Home</a></li>
+                <li><a href="#services" class="nav-link text-lg hover:text-primary transition-colors duration-300" data-target="services">Services</a></li>
+                <li><a href="#work" class="nav-link text-lg hover:text-primary transition-colors duration-300" data-target="work">Work</a></li>
+                <li><a href="#contact" class="nav-link text-lg hover:text-primary transition-colors duration-300" data-target="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Home Section -->
+        <section id="home" class="page-section active mb-24">
+            <!-- Hero -->
+            <div class="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left min-h-[600px] lg:min-h-[700px]">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Your Vision, Our Expertise.</h1>
+                    <p class="text-xl text-gray-text mb-8">
+                        We bring your ideas to life through stunning visuals and strategic digital solutions.
+                    </p>
+                    <a href="#contact" class="btn-primary" data-target="contact">Get a Free Quote</a>
+                </div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0 lg:pl-12">
+                    <!-- Hero Image -->
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\theurbanlifestyle_hero_image.png" alt="digital marketing company Muscat" class="rounded-lg w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="py-16 my-16 border-t border-b" style="border-color: #1C2833;"></div>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+                    <div class="lg:w-1/3">
+                        <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\theurbanlifestyle_about_us.png" alt="شركة تسويق رقمي مسقط" class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover mx-auto lg:mx-0">
+                    </div>
+                    <div class="lg:w-2/3 text-center lg:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">About Us</h2>
+                        <p class="text-lg text-gray-text mb-4">
+                            We are a team of passionate digital marketing specialists with a focus on creating engaging and impactful content. With over 6 years of experience, we've helped a diverse range of clients—from B2B companies and PR firms to high-profile individuals and non-profits—achieve their goals. Our mission is to transform your vision into tangible results, driving traffic, generating leads, and boosting conversions through strategic content creation, email marketing, and social media management.
+                        </p>
+                        <p class="text-lg font-semibold text-primary">Faiza Syed</p>
+                        <p class="text-sm text-gray-text">Digital Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clients Section -->
+            <div class="py-16 my-16 border-t border-b" style="border-color: #1C2833;"></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Clients</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                    <!-- Client Logo Placeholders - Replace with your own logos -->
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\agt_marketing.png" alt="Client Logo A" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\dar_marketing.png" alt="Client Logo B" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\KAUST.png" alt="Client Logo C" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\WEmpower-Pakistan.png" alt="Client Logo D" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\markisoft.png" alt="Client Logo E" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\the_ascendent.png" alt="Client Logo F" class="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                </div>
+            </div>
+
+            <!-- Testimonials Section -->
+                        <div class="py-16 my-16 border-t border-b" style="border-color: #1C2833;"></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">What Our Clients Say</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border-l-4 border-primary">
+                        <p class="text-xl font-light italic mb-4">"Faiza's strategic approach to marketing, combined with her deep understanding of digital landscapes, has enabled us to reach and empower more communities."</p>
+                        <p class="font-semibold text-primary">- Dr. Ayeesha Mujeeb</p>
+                        <p class="text-sm text-gray-text">Chairwoman, WEmpower Pakistan</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border-l-4 border-secondary">
+                        <p class="text-xl font-light italic mb-4">"I highly recommend her to any organization seeking a skilled and professional digital or content marketing specialist."</p>
+                        <p class="font-semibold text-primary">- Agota Birtalan</p>
+                        <p class="text-sm text-gray-text">Marketing Director, AGT Marketing</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border-l-4 border-primary">
+                        <p class="text-xl font-light italic mb-4">"Our website traffic has never been higher. Their work on our digital marketing strategy was a game-changer for our organization."</p>
+                        <p class="font-semibold text-primary">- Qasim Rasheed</p>
+                        <p class="text-sm text-gray-text">Cheif Operations Officer, Dar Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section - Links to individual service pages -->
+        <section id="services" class="page-section hidden mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Our Services</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Videography & Video Editing Card -->
+                <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Videography & Video Editing</h3>
+                    <p class="text-gray-text mb-6">From raw footage to polished masterpiece. We capture and craft compelling stories with professional videography and video editing.</p>
+                    <a href="#work" class="text-secondary hover:text-primary transition-colors duration-300" data-target="work">View our Work &rarr;</a>
+                </div>
+
+                <!-- Digital Marketing Card -->
+                <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Digital Marketing</h3>
+                    <p class="text-gray-text mb-6">Build your brand and reach new customers with strategic digital marketing campaigns that deliver results.</p>
+                    <a href="#work" class="text-secondary hover:text-primary transition-colors duration-300" data-target="work">View our Work &rarr;</a>
+                </div>
+
+                <!-- Website Development Card -->
+                <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Website Development</h3>
+                    <p class="text-gray-text mb-6">Crafting beautiful, responsive, and high-performance websites that work for your business.</p>
+                    <a href="#work" class="text-secondary hover:text-primary transition-colors duration-300" data-target="work">View our Work &rarr;</a>
+                </div>
+
+                <!-- Photography Card -->
+                <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Photography</h3>
+                    <p class="text-gray-text mb-6">Stunning visuals for your brand. From product shots to professional headshots, we capture the perfect moment.</p>
+                    <a href="#work" class="text-secondary hover:text-primary transition-colors duration-300" data-target="work">View our Work &rarr;</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work Section - Consolidated portfolio -->
+        <section id="work" class="page-section hidden mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Work</h2>
+            
+            <!-- Photography Sub-section -->
+            <div class="mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 text-center">Photography</h3>
+                <p class="text-center text-lg text-gray-text max-w-3xl mx-auto mb-8">
+                    We provide professional photography services to help your products and brand stand out. Our expertise includes stunning product photography that highlights every detail, as well as captivating food photography that makes every dish look delicious.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\Product_photography_in_Muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\corporate_event_photography_in_muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\food_photgraphy_in_muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\فضل_مصوري_الفعاليات_في_مسقط_عمان.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\event_management_in_muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\car_photography_in_Muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\hotel_photographer_in_muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                    <img src="C:\Users\faiza\OneDrive\TUL\the-urban-lifestyle\Image Assets\event_photography_in_muscat.png" alt="Photography Gallery" class="rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Videography Sub-section -->
+            <div class="mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 text-center">Videography & Video Editing</h3>
+                <p class="text-center text-lg text-gray-text max-w-3xl mx-auto mb-8">
+                    We capture high-end social media content and transform it into professionally edited videos using industry-standard tools like Adobe Premiere Pro and CapCut. Our edits are designed for high-quality output and are perfectly optimized for platforms like Reels and Shorts.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border border-primary">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Ii8LmwkTI?si=dTDn5tuSZSXTbrKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border border-primary">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k_pOthsJeqU?si=iEvj1tUBH6psOHJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border border-primary">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GOPAeGjSpSU?si=f7VkMeOkMjVa802n&amp;start=748" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border border-primary">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mmlqEGrpqIw?si=aV_YwAFtL3zBkDXb&amp;start=928" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Marketing Sub-section - Case Studies -->
+            <div class="mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 text-center">Digital Marketing Case Studies</h3>
+                <p class="text-center text-lg text-gray-text max-w-3xl mx-auto mb-8">
+                    Read our success stories to see how we've helped businesses like yours grow their online presence and achieve their marketing goals.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary">
+                        <h4 class="text-xl font-semibold mb-2">Case Study: Website Redesign for an Educational Institution</h4>
+                        <p class="text-gray-text mb-4">
+                            We re-designed and revamped the existing website into a better and intuitive experience.
+                        </p>
+                        <a href="https://docs.google.com/document/d/1DCM2pXwNBEJ5kL3x1Mm_CjVtN9gGIa3FTyz567Hzjr8/edit?usp=sharing" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-300 font-semibold">Download Case Study &rarr;</a>
+                    </div>
+                    <!-- Case Study 2 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary">
+                        <h4 class="text-xl font-semibold mb-2">Case Study: Brand Awareness for a Non-profit</h4>
+                        <p class="text-gray-text mb-4">
+                            Our content strategy and social media management helped a new non-profit gain 1000+ new followers and a 200% increase in overall reach.
+                        </p>
+                        <a href="https://docs.google.com/document/d/1JxxJ5lWkfDnrKd1_ApP1xXCK5dcQbti_iY5RCSsK-aQ/edit?usp=sharing" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-300 font-semibold">Download Case Study &rarr;</a>
+                    </div>
+                    <!-- Case Study 3 -->
+                    <div class="bg-gray-bg p-8 rounded-xl shadow-lg border border-primary">
+                        <h4 class="text-xl font-semibold mb-2">Case Study: Drip Campaign for Lead Nurturing</h4>
+                        <p class="text-gray-text mb-4">
+                            A thoughfully designed email drip campaign that aimed to educate and bring in more conversions.
+                        </p>
+                        <a href="https://docs.google.com/document/d/1anCuJliJhxZsF5MnNSPulaF1wcRwoncB7QlFNqJFs-E/edit?usp=sharing" target="_blank" rel="noopener" class="text-secondary hover:text-primary transition-colors duration-300 font-semibold">Download Case Study &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn-primary" data-target="contact">Get a Free Quote</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section hidden mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-2xl mx-auto bg-gray-bg p-8 rounded-xl shadow-lg border border-primary">
+                <!-- Google Form Integration -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrGoA-g8HD9xLZeecuXjUWZtOBEqriDb9hHsiIEM3LWIq_iA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="https://www.instagram.com/theeurbanlifestyle/" target="_blank" class="text-gray-text hover:text-primary transition-colors duration-300 text-2xl" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="text-gray-text hover:text-primary transition-colors duration-300 text-2xl" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-text">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.instagram.com/theeurbanlifestyle/" target="_blank" class="text-gray-text hover:text-primary transition-colors duration-300 text-2xl" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="text-gray-text hover:text-primary transition-colors duration-300 text-2xl" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p>&copy; <span id="current-year"></span> The Urban Lifestyle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation and Form Handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const pageSections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            const currentYear = new Date().getFullYear();
+
+            document.getElementById('current-year').textContent = currentYear;
+
+            // Toggle mobile menu visibility
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Function to handle page navigation
+            function navigateTo(targetId) {
+                // Hide all sections
+                pageSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                // Show the target section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+                // Update active link styling
+                navLinks.forEach(link => {
+                    // Check if the data-target attribute matches the targetId
+                    if (link.dataset.target === targetId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                // Hide mobile menu after a click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+
+            // Set up event listeners for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Determine the target ID based on the link's data-target attribute
+                    const targetId = link.dataset.target;
+                    navigateTo(targetId);
+                });
+            });
+
+            // Handle initial page load, checking for hash in URL
+            if (window.location.hash) {
+                const targetId = window.location.hash.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    navigateTo(targetId);
+                } else {
+                    navigateTo('home');
+                }
+            } else {
+                navigateTo('home');
+            }
+
+            // Handle contact form submission
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // In a real application, you would send this data to a server.
+                // For this example, we'll just show a success message.
+                formMessage.classList.remove('hidden');
+                formMessage.classList.remove('text-red-500');
+                formMessage.classList.add('text-secondary');
+                formMessage.textContent = 'Message sent successfully! We will get back to you soon.';
+                form.reset();
+            });
+
+            // Function to enable smooth scrolling on anchors
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
